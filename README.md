@@ -59,9 +59,9 @@ pnpm preview
 /
 ├── public/          # Arquivos estáticos
 ├── src/
-│   ├── components/  # Componentes React
-│   ├── lib/         # Utilitários e funções auxiliares
-│   ├── styles/      # Estilos globais
+│   ├── assets/  # Assets
+│   ├── components/         # Componentes shadcn/ui
+│   ├── lib/      # Utilitários e funções auxiliares
 │   ├── App.tsx      # Componente principal
 │   └── main.tsx     # Ponto de entrada
 └── ...
@@ -71,7 +71,7 @@ pnpm preview
 
 Este projeto utiliza as seguintes tecnologias:
 
-- **React 18** - Biblioteca para construção de interfaces
+- **React 19** - Biblioteca para construção de interfaces
 - **TypeScript** - Superset tipado de JavaScript
 - **Vite** - Build tool e dev server extremamente rápido
 - **React Compiler** - Otimização automática de componentes React
@@ -95,32 +95,19 @@ Este projeto utiliza as seguintes tecnologias:
 Para adicionar componentes do shadcn/ui, utilize o CLI:
 
 ```bash
-pnpm dlx shadcn-ui@latest add [nome-do-componente]
+pnpm dlx shadcn@latest add [nome-do-componente]
 ```
 
 Exemplo:
 
 ```bash
-pnpm dlx shadcn-ui@latest add button
+pnpm dlx shadcn@latest add button
 ```
 
 ### Configuração do ESLint
 
 Este projeto já vem com uma configuração básica do ESLint. Para expandir a configuração, edite o arquivo `eslint.config.js`.
 
-## Contribuindo
-
-Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar um Pull Request.
-
-1. Faça um fork do projeto
-2. Crie sua branch de feature (`git checkout -b feature/amazing-feature`)
-3. Commit suas mudanças (`git commit -m 'Add some amazing feature'`)
-4. Push para a branch (`git push origin feature/amazing-feature`)
-5. Abra um Pull Request
-
-## Licença
-
-Este projeto está licenciado sob a licença [MIT](LICENSE).
 
 ## Autor
 

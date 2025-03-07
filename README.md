@@ -1,54 +1,127 @@
-# React + TypeScript + Vite
+# Vite + React Compiler + React Scan + shadcn/ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto inicial (quick start) utilizando:
 
-Currently, two official plugins are available:
+- [Vite](https://vitejs.dev/) - Build tool e dev server
+- [React Compiler](https://github.com/facebook/react/tree/main/packages/react-compiler) - Compilador React para melhor performance
+- [React Scan](https://github.com/aidenybai/react-scan) - Análise estática de componentes React
+- [shadcn/ui](https://ui.shadcn.com/) - Componentes React reutilizáveis e estilizados
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Começando
 
-## Expanding the ESLint configuration
+### Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [pnpm](https://pnpm.io/) (recomendado para gerenciamento de pacotes)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/JVPVO/react-quickstart.git
+cd react-quickstart
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instale as dependências com pnpm:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+pnpm install
 ```
+
+### Desenvolvimento
+
+Inicie o servidor de desenvolvimento:
+
+```bash
+pnpm dev
+```
+
+Acesse o aplicativo em [http://localhost:5173](http://localhost:5173)
+
+### Build para produção
+
+Crie uma versão otimizada para produção:
+
+```bash
+pnpm build
+```
+
+Visualize a versão de produção localmente:
+
+```bash
+pnpm preview
+```
+
+## Estrutura do Projeto
+
+```
+/
+├── public/          # Arquivos estáticos
+├── src/
+│   ├── components/  # Componentes React
+│   ├── lib/         # Utilitários e funções auxiliares
+│   ├── styles/      # Estilos globais
+│   ├── App.tsx      # Componente principal
+│   └── main.tsx     # Ponto de entrada
+└── ...
+```
+
+## Tecnologias
+
+Este projeto utiliza as seguintes tecnologias:
+
+- **React 18** - Biblioteca para construção de interfaces
+- **TypeScript** - Superset tipado de JavaScript
+- **Vite** - Build tool e dev server extremamente rápido
+- **React Compiler** - Otimização automática de componentes React
+- **React Scan** - Análise estática para identificar problemas em componentes
+- **shadcn/ui** - Componentes React reutilizáveis e estilizados
+- **Tailwind CSS** - Framework CSS utilitário
+- **ESLint** - Linter para identificar e corrigir problemas no código
+
+## Comandos Disponíveis
+
+- `pnpm dev` - Inicia o servidor de desenvolvimento
+- `pnpm build` - Cria uma versão otimizada para produção
+- `pnpm preview` - Visualiza a versão de produção localmente
+- `pnpm lint` - Executa o linter para verificar problemas no código
+- `pnpm test` - Executa os testes
+
+## Configuração Adicional
+
+### Adicionando Componentes do shadcn/ui
+
+Para adicionar componentes do shadcn/ui, utilize o CLI:
+
+```bash
+pnpm dlx shadcn-ui@latest add [nome-do-componente]
+```
+
+Exemplo:
+
+```bash
+pnpm dlx shadcn-ui@latest add button
+```
+
+### Configuração do ESLint
+
+Este projeto já vem com uma configuração básica do ESLint. Para expandir a configuração, edite o arquivo `eslint.config.js`.
+
+## Contribuindo
+
+Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar um Pull Request.
+
+1. Faça um fork do projeto
+2. Crie sua branch de feature (`git checkout -b feature/amazing-feature`)
+3. Commit suas mudanças (`git commit -m 'Add some amazing feature'`)
+4. Push para a branch (`git push origin feature/amazing-feature`)
+5. Abra um Pull Request
+
+## Licença
+
+Este projeto está licenciado sob a licença [MIT](LICENSE).
+
+## Autor
+
+- **JVPVO** - [GitHub](https://github.com/JVPVO)

@@ -64,6 +64,7 @@ pnpm preview
 │   ├── App.tsx        # Componente principal
 │   └── main.tsx       # Ponto de entrada
 └── ...
+```
 
 ## Tecnologias
 

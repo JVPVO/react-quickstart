@@ -56,16 +56,14 @@ pnpm preview
 ## Estrutura do Projeto
 
 ```
-/
-├── public/          # Arquivos estáticos
+├── public/              # Arquivos estáticos
 ├── src/
-│   ├── assets/  # Assets
-│   ├── components/         # Componentes shadcn/ui
-│   ├── lib/      # Utilitários e funções auxiliares
-│   ├── App.tsx      # Componente principal
-│   └── main.tsx     # Ponto de entrada
+│   ├── assets/         # Assets
+│   ├── components/     # Componentes shadcn/ui
+│   ├── lib/           # Utilitários e funções auxiliares
+│   ├── App.tsx        # Componente principal
+│   └── main.tsx       # Ponto de entrada
 └── ...
-```
 
 ## Tecnologias
 
